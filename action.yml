@@ -1,0 +1,12 @@
+name: 'Android Emulator'
+description: 'Run UI tests on Android emulator'
+inputs:
+  api-version:
+    description: 'Emulator API version to use'
+    required: true
+    default: '29'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.api-version }}
